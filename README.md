@@ -2,8 +2,8 @@
 > Linux Apache2 MariaDB PHP 7.2
 
 ## Docker Hub Repository ##
-![Docker Hub Repository](https://github.com/goyalzz/LAMP-Server/blob/master/Docker%20PHP%20Lamp%20Stack.png?raw=true "Docker Hub")
 ```docker pull goyalzz/lamp-server```
+![docker pull goyalzz/lamp-server](https://github.com/goyalzz/LAMP-Server/blob/master/Docker%20PHP%20Lamp%20Stack.png?raw=true "Docker Hub")
 
 ### Entry Point ###
 `/startup.sh`
