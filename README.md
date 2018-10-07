@@ -9,7 +9,7 @@
 
 ## Mount Volumes ##
 - For PHP Code `/var/www/html`
-- Start Up Script `/startup.sh`
+- Start-Up Script `/startup.sh`
 - Maria DB `/var/lib/mysql`
 
 # Docker Compose #
