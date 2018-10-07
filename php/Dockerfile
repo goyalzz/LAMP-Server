@@ -9,6 +9,9 @@ LABEL MySql_Port="3306"
 LABEL PHP_MyAdmin_Port="8090"
 LABEL MARIA_DB_ROOT_PASSWORD="root"
 
+# Environment Variables
+ENV MYSQL_ROOT_PASSWORD root
+
 # COPY php.ini /usr/local/etc/php/
 RUN apt-get update \
   && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev \
