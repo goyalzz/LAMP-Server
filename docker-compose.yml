@@ -6,6 +6,8 @@ services:
     build: php/.
     image: goyalzz/php:7.2
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - 80:80
       - 3306:3306
