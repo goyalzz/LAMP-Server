@@ -1,0 +1,36 @@
+version: '3.5'
+
+services:
+  php:
+    container_name: PHP
+    build: php/.
+    image: goyalzz/php:7.2
+    restart: always
+    ports:
+      - 80:80
+      - 3306:3306
+    volumes:
+      - ../html:/var/www/html
+      - ./php/startup.sh:/startup.sh
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "512M"
+        max-file: "5"
+  phpmyadmin:
+    container_name: PhpMyAdmin
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_PORT: 3306
+      PMA_HOST: "db"
+      PMA_USER: root
+      PMA_PASSWORD: root
+    restart: always
+    ports:
+      - 8090:80
+    links:
+      - php:db
+    depends_on:
+      - php

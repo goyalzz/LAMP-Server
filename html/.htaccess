@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine On 
+   # This will move-up public folder
+   RewriteRule ^(.*)$ public/$1 [L]
+   # This will hide dot files
+   RewriteCond %{THE_REQUEST} ^.*/\.
+   RewriteRule ^(.*)$ - [R=404]
+</IfModule>
