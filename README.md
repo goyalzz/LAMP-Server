@@ -34,4 +34,4 @@ git clone `https://github.com/goyalzz/LAMP-Server.git`
 8. `service mysql restart`
 9. `mysql -u root -p -e "SELECT @@datadir;"`
 
-@github/support What do you think about these updates?
+@github/goyalzz Support
