@@ -21,3 +21,15 @@ git clone `https://github.com/goyalzz/LAMP-Server.git`
 
 ### Environment Variables ###
 - MYSQL_ROOT_PASSWORD: root
+
+### Change Maria DB Data Path ###
+1.`mkdir /mnt/mysql-data`
+2.`chown -R mysql:mysql /mnt/mysql-data`
+3.`mysql -u root -p -e "SELECT @@datadir;"`
+4.`service mysql stop`
+5.`service mysql status`
+6.`cp -R -p /var/lib/mysql/* /mnt/mysql-data`
+7.`vi /etc/mysql/mariadb.conf.d/50-server.cnf`
+    - Change Data Directory `datadir = /mnt/mysql-data`
+8.`service mysql restart`
+9.`mysql -u root -p -e "SELECT @@datadir;"`
