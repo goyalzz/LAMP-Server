@@ -14,6 +14,7 @@ services:
     volumes:
       - ../html:/var/www/html
       - ./php/startup.sh:/startup.sh
+      - ./mysql-data:/mnt/mysql-data
     logging:
       driver: "json-file"
       options:
