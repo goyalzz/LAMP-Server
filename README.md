@@ -33,5 +33,3 @@ git clone `https://github.com/goyalzz/LAMP-Server.git`
     - Change Data Directory `datadir = /mnt/mysql-data`
 8. `service mysql restart`
 9. `mysql -u root -p -e "SELECT @@datadir;"`
-
-@github/goyalzz Support
