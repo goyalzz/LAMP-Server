@@ -30,6 +30,6 @@ git clone `https://github.com/goyalzz/LAMP-Server.git`
 5. `service mysql status`
 6. `cp -R -p /var/lib/mysql/* /mnt/mysql-data`
 7. `vi /etc/mysql/mariadb.conf.d/50-server.cnf`
-    i. Change Data Directory `datadir = /mnt/mysql-data`
+    - Change Data Directory `datadir = /mnt/mysql-data`
 8. `service mysql restart`
 9. `mysql -u root -p -e "SELECT @@datadir;"`
